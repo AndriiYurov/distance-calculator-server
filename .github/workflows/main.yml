@@ -36,5 +36,5 @@ jobs:
           
           remote_path: server/
           remote_host: ec2-18-117-128-5.us-east-2.compute.amazonaws.com
-          remote_user: linux
+          remote_user: Andrew
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
