@@ -22,12 +22,11 @@ jobs:
         with:
            node-version: ${{ matrix.node-version }}
            cache: 'npm'
-      - run: npm ci --force
+      - run: npm ci
       
       - run: |
           touch .env
           echo "${{ secrets.PROD_ENV_FILE }}" > .env
-      #- run: npm run build --force
 
       - name: rsync deployments
         uses: burnett01/rsync-deployments@6.0.0
