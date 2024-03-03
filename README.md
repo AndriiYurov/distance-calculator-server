@@ -1,3 +1,15 @@
+# Distance Calculator
+
+### This application computes the distance between two locations.
+
+User input  queries can be unstructured. So you may search for “pilkington avenue, birmingham” as well as for “birmingham, pilkington avenue”. Commas are optional, but improve performance by reducing the complexity of the search.
+The distance is calculated using the Haversine formula, which computes the shortest distance along the Earth's surface. Although there is an option to calculate distances using the nearest road through the Google Distance Matrix API, this functionality is currently disabled.
+The application is deployed on an EC2 Linux instance with NGINX serving as the web server. 
+CI/CD implemented with GitHub Actions and every merge into the main branch automatically initiates the building, testing, and deployment.
+
+
+## Questions
+
 ## 1. Tell us what pieces of software you think are necessary to develop for the working prototype and how they are related. We call each application (web, mobile or desktop), each API, each batch process that can be deployed independently a piece of software. Support yourself with a diagram if you think necessary.
 
 ### Several pieces of software are necessary to develop a working prototype.
@@ -27,7 +39,7 @@
  ## a. As with (3), you can use something familiar or an adaptation.
 
 We would have two main branches: staging for testing and main for the production.
-Developers work on feature branches branched off the staging branch for new features or fixes. Once they're done, developers ask the team to review their work by creating a pull request  to merge their changes into staging. The team reviews the changes and gives feedback. If everything looks good, the changes are merged into staging and the next step is testing. When the changes on staging are tested and approved by QA, they're merged into main to update production. After successful deployment to production, the team monitors the application for any issues or regressions. By implementing CI/CD pipelines we automate build, test, and deployment processes, enabling rapid and reliable delivery of changes to staging and production environments.
+Developers work on feature branches branched off from staging branch for new features or fixes. Once they're done, developers ask the team to review their work by creating a pull request  to merge their changes into staging. The team reviews the changes and gives feedback. If everything looks good, the changes are merged into staging and the next step is testing. When the changes on staging are tested and approved by QA, they're merged into main to update production. After successful deployment to production, the team monitors the application for any issues or regressions. By implementing CI/CD pipelines we automate build, test, and deployment processes, enabling rapid and reliable delivery of changes to staging and production environments.
 
 ## 5. Do you think it is necessary to add any extra member to the team during the development of the prototype? What would your role be? Do you think it would be necessary to add new members after the prototype phase?
 ## a. When and why?
